@@ -1,0 +1,54 @@
+section{
+  width           : 99.2vw;
+  height          : 100vh;
+  margin-bottom   : 2em;
+}
+
+section.main-title-container{
+  background-color: pink;
+}
+
+div.main-app-main{
+  display         : flex;
+  flex-flow       : row wrap;
+  padding         : 0 1em;
+}
+.main-map{
+  width           : 60vw;
+  height          : 42.5vw;
+  background-color: red;
+  color           : white;
+  margin-right    : 1em;
+  min-width       : 300px;
+  min-height      : 300px;
+  border-radius   : 1em;
+}
+
+.main-search{
+  margin          : 1em 0.5em;
+}
+
+.main-search .main-search-bar .main-search-input input{
+  width           : 20vw;
+  min-width       : 250px;
+  padding         : 0.5em 0.5em;
+  font-size       : 1em;
+  border-radius   : 0.5em;
+  margin-right    : 0.5em;
+}
+.main-search .main-search-bar button{
+  padding         : 0.5em 0.5em;
+  border-radius   : 0.5em;
+  font-size       : 1em;
+}
+
+.main-search .main-search-bar>p{
+  margin-bottom   : 0.5em;
+}
+
+.main-search-result.hide{
+  display         : none;
+}
+.main-search-result.show{
+  display         : flex;
+}
