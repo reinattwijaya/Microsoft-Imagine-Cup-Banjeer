@@ -2,6 +2,7 @@ import React from 'react'
 import Map from '../map reader/map'
 import axios from 'axios'
 import './main.css'
+import mainBg from './static/main_bg.jpeg'
 
 class MapMain extends React.Component{
   constructor(props){
@@ -76,6 +77,7 @@ class MapMain extends React.Component{
     )
   }
 }
+
 class MapTitle extends React.Component{
   constructor(props){
     super(props)
@@ -86,8 +88,16 @@ class MapTitle extends React.Component{
   render(){
     return(
       <section id = 'main-title' className = 'main-title-container'>
+        <div className = 'main-img'>
+            
+        </div>
         <div className = 'main-title'>
-          <h1>BANJEER</h1>
+          <div className = 'main-heading'>
+            <h1>Banjeer</h1>
+          </div>
+          <div className = 'main-desc'>
+            <p>Changing the World with Artificial Intelligence</p>
+          </div>
         </div>
         <div className = 'nav-button'>
           <button onClick = {this.navDown}>This button is to go down</button>
