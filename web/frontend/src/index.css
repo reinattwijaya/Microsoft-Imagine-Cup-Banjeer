@@ -1,11 +1,9 @@
-@import url(//db.onlinewebfonts.com/c/876e42901e002174aa13adc0ccd63a50?family=San+Francisco+Display);
-@font-face {
-  font-family: "San Francisco Display"; 
-  src: url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.eot"); src: url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.woff") format("woff"), url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/876e42901e002174aa13adc0ccd63a50.svg#San Francisco Display") format("svg"); 
-}
+
+@import url('http://fonts.cdnfonts.com/css/manrope');
+
 html{
   font-size     : 18px;
-  font-family   : 'San Francisco Display';
+  font-family: 'Manrope', sans-serif;
 }
 
 body{

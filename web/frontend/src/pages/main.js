@@ -81,6 +81,7 @@ class MapMain extends React.Component{
 class MapTitle extends React.Component{
   constructor(props){
     super(props)
+    this.main   = 'Let the Rivers Flow !'
   }
   navDown = () => {
     window.location.href = '#main-app'
@@ -96,7 +97,7 @@ class MapTitle extends React.Component{
             <h1>Banjeer</h1>
           </div>
           <div className = 'main-desc'>
-            <p>Changing the World with Artificial Intelligence</p>
+            <p>{this.main}</p>
           </div>
         </div>
         <div className = 'nav-button'>

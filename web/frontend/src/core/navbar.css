@@ -1,3 +1,7 @@
+header{
+  position        : sticky;
+  top             : 0;
+}
 nav{
   display         : flex;
   flex-flow       : row wrap;
@@ -8,14 +12,9 @@ nav{
 
   justify-content : space-between;
 
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(73, 201, 240, 0.9);
 
-  position        : fixed;
-  top             : 0;
-  left            : 0;
-  right           : 0;
   z-index         : 2;
-
   backdrop-filter : blur(5px);
 }
 
@@ -30,21 +29,20 @@ nav div.navbar-links>div{
   text-align      : center;
 
   background-color: rgba(0, 0, 0, 0);
-  border-radius   : 1em;
   
   display         : flex;
   flex-flow       : column wrap;
   justify-content : center;
 }
 nav div.navbar-links>div:hover{
-  backdrop-filter : brightness(50%);
+  background-color: rgba(0, 0, 0, 0.2);
   cursor          : pointer;
 }
 
 nav div.navbar-links>div>p{
   font-weight     : 900;
   margin          : 0;
-  font-size       : 1.5em;
+  font-size       : 1.0em;
 }
 
 nav div.navbar-title{
@@ -54,7 +52,7 @@ nav div.navbar-title{
 }
 
 nav div.navbar-title p{
-  font-size       : 3em;
+  font-size       : 2em;
   margin          : 0;
   font-weight     : 900;
 }
