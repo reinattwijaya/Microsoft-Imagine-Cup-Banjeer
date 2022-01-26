@@ -1,0 +1,45 @@
+version   : "3.3"
+services  :
+  backend:
+    build       : 
+      context     : ./backend
+      dockerfile  : dockerfile
+    command     : sh -c "
+                  python manage.py makemigrations &&
+                  python manage.py migrate && 
+                  python manage.py loaddata init_data &&
+                  daphne -b 0.0.0.0 -p 8000 backend.asgi:application"
+    deploy      : 
+      restart_policy: 
+        condition     : on-failure
+        delay         : 5s
+        window        : 10s
+    volumes     :
+      - ./backend/media:/app/media
+    depends_on  :
+      - db
+    environment : 
+      - PRODUCTION=true
+      - FRONTEND_URL=http://localhost
+  frontend:
+    build       : 
+      context     : ./frontend
+      dockerfile  : dockerfile.prod
+      args        : 
+        - REACT_APP_API_ENDPOINT=http://localhost:8000/api/
+    command     : serve -s build -l tcp://0.0.0.0:3000
+    depends_on  :
+      - backend
+  nginx:
+    image       : nginx:mainline
+    ports       : 
+      - '80:8080'
+      - '8000:8081'
+    volumes : 
+      - ./data/nginx:/etc/nginx/templates
+    depends_on:
+      - frontend
+    environment :
+      - NGINX_HOST=localhost
+      - NGINX_FRONTEND_PORT=8080
+      - NGINX_BACKEND_PORT=8081
