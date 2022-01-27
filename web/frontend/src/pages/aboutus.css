@@ -6,12 +6,17 @@ div.about-us{
   display       : flex;
   flex-flow     : row wrap;
   align-items   : center;
+  justify-content: space-around;
 }
 .aboutus-img{
   width         : 40%;
+  min-width     : 300px;
+  overflow      : hidden;
+  padding       : 4em 0 4em 4em;
 }
 .aboutus-img img{
-  width         : 100%;
+  width         : 80%;
+  border-radius : 50%;
 }
 .aboutus-detail{
   width         : 50%;
@@ -35,4 +40,6 @@ div.about-us{
 }
 .aboutus-quote{
   font-style    : italic;
+  text-align    : justify;
+  margin-top    : 2em;
 }

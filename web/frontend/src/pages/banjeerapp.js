@@ -1,4 +1,5 @@
 import React from 'react'
+import Map from '../map reader/map'
 
 export default class BanjeerApp extends React.Component{
   constructor(props){
@@ -7,7 +8,7 @@ export default class BanjeerApp extends React.Component{
   render(){
     return(
       <div className = 'banjeer-container'>
-        <h1>Banjeer App</h1>
+        <Map />
       </div>
     )
   }

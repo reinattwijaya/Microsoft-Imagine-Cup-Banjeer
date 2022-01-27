@@ -1,5 +1,9 @@
 import React from 'react'
 import './aboutus.css'
+import Jowi from './static/jowi.jpg'
+import Irfan from './static/irfan.jpg'
+import Izaaz from './static/Izaaz.jpg'
+import Reinatt from './static/reinatt.jpg'
 
 const imgLink = 'https://ktofscience.files.wordpress.com/2020/08/anonymousappcontactsopenlineprofileusericon-1320183042822068474_512.png'
 export default class AboutUs extends React.Component{
@@ -9,7 +13,7 @@ export default class AboutUs extends React.Component{
       name    : 'Muhammad Irfan Akbar', 
       major   : ['Computer Science', 'Business and Technology Management'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
-      image   : imgLink, 
+      image   : Irfan, 
       quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
@@ -18,7 +22,7 @@ export default class AboutUs extends React.Component{
       name    : 'Jonathan Willianto', 
       major   : ['Mechanical Engineering', 'Computer Science'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
-      image   : imgLink, 
+      image   : Jowi, 
       quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
@@ -27,7 +31,7 @@ export default class AboutUs extends React.Component{
       name    : 'Reinatt Hansel Wijaya', 
       major   : ['Computer Science', 'Business and Technology Management'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
-      image   : imgLink, 
+      image   : Reinatt, 
       quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
@@ -36,7 +40,7 @@ export default class AboutUs extends React.Component{
       name    : 'Muhammad Izaaz Inhar Ramahdani', 
       major   : ['Computer Science', 'Civil Engineering'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
-      image   : imgLink, 
+      image   : Izaaz, 
       quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
