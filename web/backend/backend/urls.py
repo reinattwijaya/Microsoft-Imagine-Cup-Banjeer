@@ -30,7 +30,7 @@ router.register(r'river', RiverView, 'river')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('upload/', ImageViewSet.as_view(), name='upload'),
+    path('api/upload/', ImageViewSet.as_view(), name='upload'),
 ]
 
 if settings.DEBUG:
