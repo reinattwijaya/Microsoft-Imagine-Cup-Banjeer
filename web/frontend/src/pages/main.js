@@ -1,10 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import './main.css'
-import mainBg from './static/main_bg.jpeg'
-import IU1 from './static/IU 1.jpg'
-import IU2 from './static/IU 2.jpg'
-import IU3 from './static/IU 3.jpg'
+import image from './static/pc.png'
 import Loading from '../core/loading'
 
 const Map = React.lazy(() => import('../map reader/map'))
@@ -126,6 +123,9 @@ class MapMain extends React.Component{
   render(){
     return(
       <section id = 'main-app' className = 'main-app'>
+        <div className = 'main-app-title'>
+          <h1>Map Explorer & River API</h1>
+        </div>
         <div className = 'main-app-main'>
           <div className = 'main-map'>
             <React.Suspense fallback = {Loading}>
@@ -173,61 +173,12 @@ class MapTitle extends React.Component{
     super(props)
     this.main   = 'Let the Rivers Flows !'
     this.main2  = 'A computer vision-based web app to monitor the condition of rivers from satellite images'
-    this.state  = {
-      curImg  : 0, 
-    }
-    this.imgSrc = [mainBg, IU1, IU2, IU3]
-  }
-  navDown = () => {
-    window.location.href = '#main-app'
-  }
-  renderSlideshow(){
-    const size  = this.imgSrc.length
-    var aft, bef
-    if(this.state.curImg == 0){
-      aft = 1
-      bef = size - 1
-    }
-    else if(this.state.curImg == size){
-      aft = 0
-      bef = this.state.curImg - 1
-    }
-    else{
-      aft = this.state.curImg + 1
-      bef = this.state.curImg - 1
-    }
-    return(
-      <React.Fragment>
-        {this.imgSrc.map((val, id) => {
-          const className = id == aft ? 'slid-aft' : id == bef ? 'slid-bef' : id == this.state.curImg ? 'slid-cur' : 'slid-hid'
-          return(
-            <img src = {val} key = {id} className = {className} />
-          )
-        })}
-      </React.Fragment>
-    )
-  }
-  navLeft = () => {
-    if(this.state.curImg == 0){
-      this.setState({curImg : this.imgSrc.length - 1})
-    }
-    else{
-      this.setState({curImg : this.state.curImg - 1})
-    }
-  }
-  navRight = () => {
-    if(this.state.curImg == this.imgSrc.length - 1){
-      this.setState({curImg : 0})
-    }
-    else{
-      this.setState({curImg : this.state.curImg + 1})
-    }
   }
   render(){
     return(
       <section id = 'main-title' className = 'main-title-container'>
         <div className = 'main-img'>
-          {this.renderSlideshow()}
+          <img src = {image}/>
         </div>
         <div className = 'main-title'>
           <div className = 'main-heading'>
@@ -236,10 +187,6 @@ class MapTitle extends React.Component{
           <div className = 'main-desc'>
             <p>{this.main2}</p>
           </div>
-        </div>
-        <div className = 'main-control'>
-          <button onClick = {this.navLeft}> {'<'} </button>
-          <button onClick = {this.navRight}> {'>'} </button>
         </div>
       </section>
     )
