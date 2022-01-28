@@ -24,7 +24,7 @@ services  :
       context     : ./frontend
       dockerfile  : dockerfile
       args        : 
-        - REACT_APP_API_ENDPOINT=http://20.120.98.83:8000/api/
+        - REACT_APP_API_ENDPOINT=http://20.120.98.83:8000/api
     command     : serve -s build -l tcp://0.0.0.0:3000
     depends_on  :
       - backend
