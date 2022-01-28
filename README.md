@@ -1,4 +1,4 @@
-# AWS-Disaster-Response-Hackaton
+# Microsoft Imagine Cup -- Banjeer
 This is our repository for the AWS Disaster Response Hackaton
 
 ## Important Links 
