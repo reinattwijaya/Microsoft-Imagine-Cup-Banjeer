@@ -158,6 +158,7 @@ div.main-app-main{
   color           : white;
   box-shadow      : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   margin-bottom   : 2em;
+  width           : 30vw;
 }
 
 .main-search-nav{
