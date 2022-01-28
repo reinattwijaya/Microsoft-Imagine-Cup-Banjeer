@@ -17,7 +17,7 @@ services  :
     volumes     :
       - ./backend/media:/app/media
     environment : 
-      - PRODUCTION=true
+      - PRODUCTION=false
       - FRONTEND_URL=http://localhost
   frontend:
     build       : 

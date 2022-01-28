@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ioip5%$)+#dt5^tyaqq#vh+)ycdce3mvw&p-g)$pn-v%2lpiq3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['PRODUCTION'] != 'TRUE' if 'PRODUCTION' in os.environ.keys() else True
+DEBUG = os.environ['PRODUCTION'] != 'true' if 'PRODUCTION' in os.environ.keys() else True
 
 # ALLOWED_HOSTS = [
 #     os.environ['FRONTEND_URL'] if 'FRONTEND_URL' in os.environ.keys() else 'localhost:3000'
