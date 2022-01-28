@@ -5,7 +5,7 @@
     "fields"  : {
       "name"      : "Sungai Ciliwung", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Don't throw thrash into the river, Plant trees on hills and near streams to reduce land run-off, Gather with your community for a river cleanup social work!"
     } 
   },
   {
@@ -14,7 +14,7 @@
     "fields"  : {
       "name"      : "Sungai Cakung", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid making structures directly next to the river, Don't throw thrash into the river, Gather with your community for a river cleanup social work!"
     } 
   },
   {
@@ -23,7 +23,7 @@
     "fields"  : {
       "name"      : "Sungai Pesanggaran", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid throwing toxic waste directy into the river, Gather with your community for a river cleanup social work!, Avoid making structures directly next to the river"
     } 
   },
   {
@@ -32,7 +32,7 @@
     "fields"  : {
       "name"      : "Sungai Angke", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid making structures directly next to the river, Don't throw thrash into the river, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -41,7 +41,7 @@
     "fields"  : {
       "name"      : "Ciliwung", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Gather with your community for a river cleanup social work!, Plant trees on hills and near streams to reduce land run-off, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -50,7 +50,7 @@
     "fields"  : {
       "name"      : "Sungai Krukut", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Plant trees on hills and near streams to reduce land run-off, Avoid throwing toxic waste directy into the river, Gather with your community for a river cleanup social work!"
     } 
   },
   {
@@ -59,7 +59,7 @@
     "fields"  : {
       "name"      : "Sungai Kali Baru Barat", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Gather with your community for a river cleanup social work!, Avoid throwing toxic waste directy into the river, Don't throw thrash into the river"
     } 
   },
   {
@@ -68,7 +68,7 @@
     "fields"  : {
       "name"      : "Sungai Baru Timur", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid throwing toxic waste directy into the river, Plant trees on hills and near streams to reduce land run-off, Avoid making structures directly next to the river"
     } 
   },
   {
@@ -77,7 +77,7 @@
     "fields"  : {
       "name"      : "Sungai Cipinang", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid throwing toxic waste directy into the river, Don't throw thrash into the river, Plant trees on hills and near streams to reduce land run-off"
     } 
   },
   {
@@ -86,7 +86,7 @@
     "fields"  : {
       "name"      : "Sungai Sunter", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid making structures directly next to the river, Gather with your community for a river cleanup social work!, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -95,7 +95,7 @@
     "fields"  : {
       "name"      : "Sungai Grogol", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Gather with your community for a river cleanup social work!, Plant trees on hills and near streams to reduce land run-off, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -104,7 +104,7 @@
     "fields"  : {
       "name"      : "Sungai Jatikramat", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Plant trees on hills and near streams to reduce land run-off, Don't throw thrash into the river, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -113,7 +113,7 @@
     "fields"  : {
       "name"      : "Sungai Buaran", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Plant trees on hills and near streams to reduce land run-off, Avoid making structures directly next to the river, Gather with your community for a river cleanup social work!"
     } 
   },
   {
@@ -122,7 +122,7 @@
     "fields"  : {
       "name"      : "Sungai Kaso", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Gather with your community for a river cleanup social work!, Don't throw thrash into the river, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -131,7 +131,7 @@
     "fields"  : {
       "name"      : "Sungai Cikawalon", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid making structures directly next to the river, Avoid throwing toxic waste directy into the river, Plant trees on hills and near streams to reduce land run-off"
     } 
   },
   {
@@ -140,7 +140,7 @@
     "fields"  : {
       "name"      : "Sungai Baliung", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Avoid making structures directly next to the river, Plant trees on hills and near streams to reduce land run-off, Avoid throwing toxic waste directy into the river"
     } 
   },
   {
@@ -149,7 +149,7 @@
     "fields"  : {
       "name"      : "Sungai Kaso", 
       "condition" : "Bad",
-      "advice"    : "HA, HA, HA"
+      "advice"    : "Don't throw thrash into the river, Gather with your community for a river cleanup social work!, Plant trees on hills and near streams to reduce land run-off"
     } 
   }
 ]
