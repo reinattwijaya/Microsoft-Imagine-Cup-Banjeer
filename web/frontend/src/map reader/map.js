@@ -27,7 +27,7 @@ export default class Map extends React.Component{
   renderImage(){
     // replace i++ and j++ with the correct increment
     const render  = []
-    for(let i = 0; i < this.imageSize.height; i+=1024){
+    for(let i = 68608; i < this.imageSize.height; i+=1024){
       const row   = []
       for(let j = 0; j < this.imageSize.width; j+=1024){
         row.push(
