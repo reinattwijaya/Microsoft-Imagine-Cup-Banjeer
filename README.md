@@ -1,5 +1,5 @@
 # Microsoft Imagine Cup — Banjeer
-This is our repository for the AWS Disaster Response Hackaton
+This is our repository for our product, Banjeer!
 
 ## Important Links 
 - Dataset : [Drive](https://drive.google.com/file/d/1zc9JX2JNZShUhYrE6UOrXJe03waRrqsa/view?usp=sharing)
