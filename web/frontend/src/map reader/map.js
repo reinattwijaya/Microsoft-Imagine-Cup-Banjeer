@@ -1,5 +1,6 @@
 import React from 'react'
 import './map.css'
+import LazyLoad from 'react-lazyload'
 
 function importAll(r){
   let images  = {}
@@ -20,18 +21,18 @@ export default class Map extends React.Component{
     // TODO : LOL LAZY LOADING LIHAT NAT
     // TODO : KALAU GA BISA JUGA, AMBIL SEBAGIAN LAH YANG SABI
     this.imageSize  = {
-      width   : 0, height : 0
+      width   : 41984, height : 192512
     }
   }
   renderImage(){
     // replace i++ and j++ with the correct increment
     const render  = []
-    for(let i = 0; i < this.imageSize.height; i++){
+    for(let i = 0; i < this.imageSize.height; i+=1024){
       const row   = []
-      for(let j = 0; j < this.imageSize.width; j++){
+      for(let j = 0; j < this.imageSize.width; j+=1024){
         row.push(
           <div className = 'image-hor'>
-            {/*<img src = {image[`${i}_${j}.jpg`]} />*/}
+              <img src = {require(`./static/downsized_img/${i}_${j}.jpeg`).default} loading='lazy'/>
           </div>
         )
       }
@@ -50,7 +51,7 @@ export default class Map extends React.Component{
   render(){
     return(
       <div className = 'map-container'>
-        {/*this.renderImage()*/}
+        {this.renderImage()}
       </div>
     )
   }

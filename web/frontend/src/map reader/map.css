@@ -8,3 +8,8 @@
   width           : 100%;
   border-radius   : 0.5em;
 }
+
+.image-hor img{
+  height: 32px;
+  width: 32px;
+}

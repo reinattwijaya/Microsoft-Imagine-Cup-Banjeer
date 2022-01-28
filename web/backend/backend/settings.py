@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-ioip5%$)+#dt5^tyaqq#vh+)ycdce3mvw&p-g)$pn-v%2lpiq3
 DEBUG = os.environ['PRODUCTION'] != 'TRUE' if 'PRODUCTION' in os.environ.keys() else True
 
 # ALLOWED_HOSTS = [
-#     os.environ['FRONTEND_URL'] if 'FRONTEND_URL' in os.environ.keys() else 'localhost:3000',
+#     os.environ['FRONTEND_URL'] if 'FRONTEND_URL' in os.environ.keys() else 'localhost:3000'
 # ]
 
 CORS_ALLOW_ALL_ORIGINS = True
