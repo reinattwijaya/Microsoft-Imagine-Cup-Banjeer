@@ -21,6 +21,8 @@ class MapMain extends React.Component{
         condition : '', 
         advice    : [], 
       }],
+      cur_page      : 0, 
+      max_page      : 0, 
       search_text   : 'Search Results'
     }
   }
@@ -50,10 +52,14 @@ class MapMain extends React.Component{
             advice    : val.advice.split(',')
           }
         })
+        let len = data.length
+        let pag = Math.floor(len / 2)
         this.setState({
           query         : true,
           query_return  : data,
-          search_text   : 'Search Results'
+          search_text   : 'Search Results',
+          cur_page      : 0, 
+          max_page      : pag
         })
       }
     })
@@ -65,52 +71,57 @@ class MapMain extends React.Component{
       }
     })
   }
-  goUp = () => {
-    window.location.href = '#main-title'
-  }
   renderSearchResult(){
-    const render = this.state.query_return.map((val, id) => 
-      <div key = {id} className = 'main-search-block'>
-        <div className = 'main-search-numbering'>
-          <p>{id + 1}.</p>
-        </div>
-        <div className = 'main-search-content'>
-          <div className = 'main-search-name'>
-            <p>{val.name}</p>
+    const render = this.state.query_return.map((val, id) => {
+      let current_page = this.state.cur_page * 2
+      if(id === current_page || id === current_page + 1){
+        return(
+          <div key = {id} className = 'main-search-block'>
+            <div className = 'main-search-numbering'>
+              <p>{id + 1}.</p>
+            </div>
+            <div className = 'main-search-content'>
+              <div className = 'main-search-name'>
+                <p>{val.name}</p>
+              </div>
+              <div className = 'main-search-condition'>
+                <div className = 'main-search-condition-title'>
+                  <p>Condition</p>
+                </div>
+                <div className = 'main-search-condition-content'>
+                  <p>{val.condition}</p>
+                </div>
+              </div>
+              <div className = 'main-search-advice'>
+                <div className = 'main-search-advice-title'>
+                  <p>Advice</p>
+                </div>
+                <div className = 'main-search-condition-content'>
+                  {val.advice.map((val, id) => 
+                    <p key = {id}>{val}</p>
+                  )}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className = 'main-search-condition'>
-            <div className = 'main-search-condition-title'>
-              <p>Condition</p>
-            </div>
-            <div className = 'main-search-condition-content'>
-              <p>{val.condition}</p>
-            </div>
-          </div>
-          <div className = 'main-search-advice'>
-            <div className = 'main-search-advice-title'>
-              <p>Advice</p>
-            </div>
-            <div className = 'main-search-condition-content'>
-              {val.advice.map((val, id) => 
-                <p key = {id}>{val}</p>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    )
+        )
+      }
+    })
     return(
-      <React.Fragment>
+      <React.Fragment key = {this.state.cur_page}>
         {render}
       </React.Fragment>
     )
   }
+  prevPage = () => {
+    if(this.state.cur_page > 0) this.setState({cur_page : this.state.cur_page - 1})
+  }
+  nextPage = () => {
+    if(this.state.cur_page < this.state.max_page - 1) this.setState({cur_page : this.state.cur_page + 1})
+  }
   render(){
     return(
       <section id = 'main-app' className = 'main-app'>
-        <div className = 'main-app-nav'>
-          <button onClick = {this.goUp}>go up</button>
-        </div>
         <div className = 'main-app-main'>
           <div className = 'main-map'>
             <React.Suspense fallback = {Loading}>
@@ -136,6 +147,14 @@ class MapMain extends React.Component{
               </div>
               <div className = 'main-search-detail'>
                 {this.renderSearchResult()}
+              </div>
+              <div className = 'main-search-nav' key = {this.state.cur_page}>
+                <button 
+                  className = {this.state.cur_page > 0 ? '' : 'hidden'}
+                  onClick = {this.prevPage}>{'<'}</button>
+                <button 
+                  className = {this.state.cur_page < this.state.max_page - 1 ? '' : 'hidden'} 
+                  onClick = {this.nextPage}>{'>'}</button>
               </div>
             </div>
           </div>

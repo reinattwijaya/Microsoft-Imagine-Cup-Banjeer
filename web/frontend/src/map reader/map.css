@@ -1,15 +1,17 @@
 .map-container{
   height          : 100%;
   width           : 100%;
+  overflow-y      : scroll;
 }
-
-.map-container canvas{
-  height          : 100%;
-  width           : 100%;
-  border-radius   : 0.5em;
-}
-
 .image-hor img{
-  height: 32px;
-  width: 32px;
+  height          : 32px;
+  width           : 32px;
+}
+.image-vert{
+  height          : 32px;
+  display         : flex;
+  flex-flow       : row wrap;
+}
+.image-hor{
+  width           : 32px;
 }

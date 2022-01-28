@@ -8,7 +8,7 @@ export default class BanjeerApp extends React.Component{
   render(){
     return(
       <div className = 'banjeer-container'>
-        <Map />
+        
       </div>
     )
   }

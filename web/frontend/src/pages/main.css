@@ -31,6 +31,7 @@ section.main-title-container>div{
   width           : 99.2vw;
   height          : 100vh;
   transition      : transform 0.2s;
+  filter          : blur(5px);
 }
 .main-title-container .main-img img.slid-hid{
   display         : none;
@@ -46,14 +47,15 @@ section.main-title-container>div{
   display         : none;
   transform       : translateX(100%);
 }
-.main-control{
+section.main-title-container>div.main-control{
   position        : absolute;
-  top             : 90%;
-  transform       : translateY(-50%);
+  top             : 50%;
+  transform       : translateY(-70%);
   
   display         : flex;
   flex-flow       : row wrap;
   justify-content : space-between;
+  height          : unset;
 }
 .main-control button{
   height          : 80px;
@@ -74,8 +76,9 @@ section.main-title-container>div{
   position        : absolute;
   left            : 50%;
   top             : 50%;
-  transform       : translate(-50%, -25%);
+  transform       : translate(-50%, -70%);
   animation       : title-animation 1.0s ease-in-out;
+  height          : unset;
 }
 .main-title-container .main-title h1{
   font-size       : 64px;
@@ -98,7 +101,6 @@ div.main-app-main{
 .main-map{
   width           : 60vw;
   height          : 42.5vw;
-  background-color: red;
   color           : white;
   margin-right    : 1em;
   min-width       : 300px;
@@ -148,7 +150,30 @@ div.main-app-main{
   border-radius   : 1em;
   color           : white;
   box-shadow      : rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-bottom   : 2em;
 }
+
+.main-search-nav{
+  display         : flex;
+  flex-flow       : row nowrap;
+  justify-content : space-around;
+}
+.main-search-nav button{
+  background-color: #5a9cabff;
+  padding         : 1em 2em;
+  border          : 0;
+  border-radius   : 0.5em;
+  color           : white;
+  font-weight     : 900;
+  font-size       : 1em;
+}
+.main-search-nav button:hover{
+  background-color: rgb(50, 116, 131);
+}
+.main-search-nav button.hidden{
+  visibility      : hidden;
+}
+
 .main-search-numbering{
   margin-right    : 1em;
   font-weight     : 900;
@@ -157,6 +182,7 @@ div.main-app-main{
 .main-search-name{
   font-size       : 1.5em;
   font-weight     : 900;
+  text-transform  : capitalize;
 }
 .main-search-title p{
   font-size       : 2em;
