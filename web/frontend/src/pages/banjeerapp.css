@@ -1,0 +1,66 @@
+.banjeer-container{
+  display       : flex;
+  flex-flow     : row wrap;
+  padding       : 2em 5em;
+}
+.banjeer-container>div{
+  width         : 48%;
+}
+.banjeer-container .banjeer-upload-form{
+  display       : flex;
+  flex-flow     : column wrap;
+}
+.banjeer-upload-input{
+  display       : flex;
+  flex-flow     : row wrap;
+  align-items   : center;
+}
+.banjeer-upload-input>div{
+  margin-right  : 1em;
+}
+.banjeer-upload-title{
+  font-size     : 2em;
+  font-weight   : 900;
+  margin-bottom : 1em;
+}
+.banjeer-prev-img img{
+  max-height    : 50vh;
+  max-width     : 40vw;
+}
+.banjeer-prev-title, .banjeer-result-title{
+  font-size     : 2em;
+  font-weight   : 900;
+}
+.banjeer-upload-form{
+  margin-bottom : 2em;
+}
+
+input{
+  font-size     : 1em;
+}
+
+button{
+  background-color: #5a9cabff;
+  padding         : 1em 2em;
+  border          : 0;
+  border-radius   : 0.5em;
+  color           : white;
+  font-weight     : 900;
+  font-size       : 1em;
+}
+button:hover{
+  background-color: rgb(50, 116, 131);
+}
+
+.banjeer-result-image img{
+  max-height      : 50vh;
+  max-width       : 50vw;
+  min-width       : 40vw;
+  min-height      : 40vw;
+}
+.banjeer-result-image.show{
+  display         : block
+}
+.banjeer-result-image.hide{
+  display         : none;
+}

@@ -28,10 +28,14 @@ class MapMain extends React.Component{
   }
   inputChange = (event) => {
     this.setState({
-      search_query  : event.target.value
+      search_query  : event.target.value, warn : ''
     })
   }
   searchClick = () =>{
+    if(this.state.search_query === ''){
+      this.setState({warn : 'Enter search query'})
+      return
+    }
     let baseUrl   = process.env.REACT_APP_API_ENDPOINT != undefined ? process.env.REACT_APP_API_ENDPOINT : 'http://localhost:8000/api'
     let url       = `${baseUrl}/river/?search=${this.state.search_query}`
     axios.get(url)
@@ -139,7 +143,7 @@ class MapMain extends React.Component{
                 />
                 <button onClick = {this.searchClick}><p>search</p></button>
               </div>
-              <p>{this.state.warn}</p>
+              <p className = 'warn'>{this.state.warn}</p>
             </div>
             <div className ={`main-search-result ${!this.state.query ? 'hide' : 'show'}`}>
               <div className = 'main-search-title'>
