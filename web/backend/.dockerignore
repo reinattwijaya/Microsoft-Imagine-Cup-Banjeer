@@ -1,0 +1,6 @@
+__pycache__/
+media/
+dockerfile.prod
+dockerfile
+.dockerignore
+.gitignore

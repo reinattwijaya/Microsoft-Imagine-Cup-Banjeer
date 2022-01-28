@@ -1,0 +1,45 @@
+div.about-us{
+  display       : flex;
+  flex-flow     : column wrap;
+}
+.aboutus-cont{
+  display       : flex;
+  flex-flow     : row wrap;
+  align-items   : center;
+  justify-content: space-around;
+}
+.aboutus-img{
+  width         : 40%;
+  min-width     : 300px;
+  overflow      : hidden;
+  padding       : 4em 0 4em 4em;
+}
+.aboutus-img img{
+  width         : 80%;
+  border-radius : 50%;
+}
+.aboutus-detail{
+  width         : 50%;
+}
+.aboutus-detail .aboutus-name{
+  font-size     : 2.5em;
+  font-weight   : 600;
+}
+.aboutus-detail .aboutus-major, .aboutus-detail .aboutus-univ{
+  display       : flex;
+  flex-flow     : row wrap;
+}
+.aboutus-detail .aboutus-major > *, .aboutus-detail .aboutus-univ > *{
+  margin-right  : 0.2em;
+}
+
+.aboutus-univ > p{
+  color         : rgb(255, 171, 14);
+  font-weight   : 900;
+  font-size     : 1.2em;
+}
+.aboutus-quote{
+  font-style    : italic;
+  text-align    : justify;
+  margin-top    : 2em;
+}
