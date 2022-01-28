@@ -1,0 +1,155 @@
+[
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 0, 
+    "fields"  : {
+      "name"      : "Sungai Ciliwung", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 1, 
+    "fields"  : {
+      "name"      : "Sungai Cakung", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 2, 
+    "fields"  : {
+      "name"      : "Sungai Pesanggaran", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 3, 
+    "fields"  : {
+      "name"      : "Sungai Angke", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 4, 
+    "fields"  : {
+      "name"      : "Ciliwung", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 5, 
+    "fields"  : {
+      "name"      : "Sungai Krukut", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 6, 
+    "fields"  : {
+      "name"      : "Sungai Kali Baru Barat", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 7, 
+    "fields"  : {
+      "name"      : "Sungai Baru Timur", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 8, 
+    "fields"  : {
+      "name"      : "Sungai Cipinang", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 9, 
+    "fields"  : {
+      "name"      : "Sungai Sunter", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 10, 
+    "fields"  : {
+      "name"      : "Sungai Grogol", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 11, 
+    "fields"  : {
+      "name"      : "Sungai Jatikramat", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 12, 
+    "fields"  : {
+      "name"      : "Sungai Buaran", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 13, 
+    "fields"  : {
+      "name"      : "Sungai Kaso", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 14, 
+    "fields"  : {
+      "name"      : "Sungai Cikawalon", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 15, 
+    "fields"  : {
+      "name"      : "Sungai Baliung", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  },
+  {
+    "model"   : "river.rivernameadvice",
+    "pk"      : 16, 
+    "fields"  : {
+      "name"      : "Sungai Kaso", 
+      "condition" : "Bad",
+      "advice"    : "HA, HA, HA"
+    } 
+  }
+]

@@ -4,3 +4,4 @@ dockerfile.prod
 dockerfile
 .dockerignore
 .gitignore
+db.sqlite3

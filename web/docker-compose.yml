@@ -7,6 +7,7 @@ services  :
     command     : sh -c "
                   python manage.py makemigrations &&
                   python manage.py migrate && 
+                  python manage.py loaddata init_data &&
                   daphne -b 0.0.0.0 -p 8000 backend.asgi:application"
     deploy      : 
       restart_policy: 
