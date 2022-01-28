@@ -4,4 +4,4 @@ from .models import RiverNameAdvice
 class RiverSerializer(serializers.ModelSerializer):
     class Meta:
         model = RiverNameAdvice
-        fields = ('river_name', 'river_advice')
+        fields = ('name', 'condition', 'advice')
