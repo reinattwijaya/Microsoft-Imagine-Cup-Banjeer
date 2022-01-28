@@ -114,7 +114,6 @@ def pred_img(root_path, checkpoint_path) :
                             transforms.Normalize([0.485, 0.456, 0.406], 
                                                  [0.229, 0.224, 0.225])
                            ])
-    print(1)
     
     # load img
     img = Image.open(root_path)
@@ -122,7 +121,6 @@ def pred_img(root_path, checkpoint_path) :
     img = np.array(img)
     img = trans(img)
     img = torch.unsqueeze(img, 0)
-    print(2)
 
     # load_model
     model = unetresnet50(3)
@@ -134,8 +132,6 @@ def pred_img(root_path, checkpoint_path) :
         print("set to eval mode")
     except:
         print("error")
-    
-    print(3)
 
     # predict
     img = img.to(device)
@@ -143,16 +139,9 @@ def pred_img(root_path, checkpoint_path) :
     pred = torch.sigmoid(pred)
     pred = pred.data.cpu().numpy()
     
-    print(img.shape)
-    print(pred.shape)
-    
-    print(4)
-    
     # convert to image
     img = reverse_transform(img[0].cpu())
     pred = masks_to_colorimg(pred[0])
-
-    print(5)
     
     # convert merge img and pred
     gabung = np.zeros(img.shape)
