@@ -3,14 +3,15 @@ import {
   BrowserRouter as Router, 
   Routes, 
   Route,
-  useParams,
-  Navigate
 } from 'react-router-dom'
 
-import Main from '../pages/main'
-import AboutUs from '../pages/aboutus'
-import BanjeerApp from '../pages/banjeerapp'
 import Navbar from '../core/navbar'
+import Loading from '../core/loading'
+
+
+const Main  = React.lazy(() => import('../pages/main'))
+const AboutUs = React.lazy(() => import('../pages/aboutus'))
+const BanjeerApp = React.lazy(() => import('../pages/banjeerapp'))
 
 export default class MainRouting extends React.Component{
   constructor(props){
@@ -22,13 +23,15 @@ export default class MainRouting extends React.Component{
         <header className = 'banjeer-head'>
           <Navbar />
         </header>
-        <main className = 'banjeer-main'>
-          <Routes>
-            <Route path = '/' element = {<Main />}/>
-            <Route path = '/about-us' element = {<AboutUs />} />
-            <Route path = '/banjeer-app' element = {<BanjeerApp />} />
-          </Routes>
-        </main>
+        <React.Suspense fallback = {Loading}>
+          <main className = 'banjeer-main'>
+            <Routes>
+              <Route path = '/' element = {<Main />} />
+              <Route path = 'about-us' element = {<AboutUs />}/>
+              <Route path = 'banjeer-app' element = {<BanjeerApp />}/>
+            </Routes>
+          </main>
+        </React.Suspense>
       </Router>
     )
   }

@@ -1,11 +1,13 @@
 import React from 'react'
-import Map from '../map reader/map'
 import axios from 'axios'
 import './main.css'
 import mainBg from './static/main_bg.jpeg'
 import IU1 from './static/IU 1.jpg'
 import IU2 from './static/IU 2.jpg'
 import IU3 from './static/IU 3.jpg'
+import Loading from '../core/loading'
+
+const Map = React.lazy(() => import('../map reader/map'))
 
 class MapMain extends React.Component{
   constructor(props){
@@ -13,7 +15,13 @@ class MapMain extends React.Component{
     this.state  = {
       search_query  : '', 
       warn          : '', 
-      query         : false
+      query         : false,
+      query_return  : [{
+        name      : '', 
+        condition : '', 
+        advice    : [], 
+      }],
+      search_text   : 'Search Results'
     }
   }
   inputChange = (event) => {
@@ -22,15 +30,32 @@ class MapMain extends React.Component{
     })
   }
   searchClick = () =>{
-    let postData  = {
-      
-    }
-    let url       = ''
-    axios.post(url, postData)
+    let baseUrl   = process.env.REACT_APP_API_ENDPOINT != undefined ? process.env.REACT_APP_API_ENDPOINT : 'http://localhost:8000/api'
+    let url       = `${baseUrl}/river/?search=${this.state.search_query}`
+    axios.get(url)
     .then((resp) => {
-      this.setState({
-        query : true
-      })
+      let data    = resp.data
+      if(data.length === 0){
+        this.setState({
+          query_return  : [],
+          query         : true,
+          search_text   : 'No Matching Queries' 
+        })
+      }
+      else{
+        data    = data.map((val, id) => {
+          return {
+            name      : val.name, 
+            condition : val.condition, 
+            advice    : val.advice.split(',')
+          }
+        })
+        this.setState({
+          query         : true,
+          query_return  : data,
+          search_text   : 'Search Results'
+        })
+      }
     })
     .catch((err) => {
       if(err && err.response){
@@ -43,6 +68,43 @@ class MapMain extends React.Component{
   goUp = () => {
     window.location.href = '#main-title'
   }
+  renderSearchResult(){
+    const render = this.state.query_return.map((val, id) => 
+      <div key = {id} className = 'main-search-block'>
+        <div className = 'main-search-numbering'>
+          <p>{id + 1}.</p>
+        </div>
+        <div className = 'main-search-content'>
+          <div className = 'main-search-name'>
+            <p>{val.name}</p>
+          </div>
+          <div className = 'main-search-condition'>
+            <div className = 'main-search-condition-title'>
+              <p>Condition</p>
+            </div>
+            <div className = 'main-search-condition-content'>
+              <p>{val.condition}</p>
+            </div>
+          </div>
+          <div className = 'main-search-advice'>
+            <div className = 'main-search-advice-title'>
+              <p>Advice</p>
+            </div>
+            <div className = 'main-search-condition-content'>
+              {val.advice.map((val, id) => 
+                <p key = {id}>{val}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+    return(
+      <React.Fragment>
+        {render}
+      </React.Fragment>
+    )
+  }
   render(){
     return(
       <section id = 'main-app' className = 'main-app'>
@@ -51,7 +113,9 @@ class MapMain extends React.Component{
         </div>
         <div className = 'main-app-main'>
           <div className = 'main-map'>
-            <Map />
+            <React.Suspense fallback = {Loading}>
+              <Map />
+            </React.Suspense>
           </div>
           <div className = 'main-search'>
             <div className = 'main-search-bar'>
@@ -68,10 +132,10 @@ class MapMain extends React.Component{
             </div>
             <div className ={`main-search-result ${!this.state.query ? 'hide' : 'show'}`}>
               <div className = 'main-search-title'>
-                <p>Search Result</p>
+                <p>{this.state.search_text}</p>
               </div>
               <div className = 'main-search-detail'>
-
+                {this.renderSearchResult()}
               </div>
             </div>
           </div>
