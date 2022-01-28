@@ -19,12 +19,20 @@ from django.urls import include, path
 from django.contrib import admin
 from django.urls import path,include               
 from rest_framework import routers                 
-from river import views                             
+from django.conf import settings
+from django.conf.urls.static import static      
+from image.views import ImageViewSet
+from river.views import RiverView
 
 router = routers.DefaultRouter()                   
-router.register(r'river', views.RiverView, 'river')  
+router.register(r'river', RiverView, 'river')  
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('upload/', ImageViewSet.as_view(), name='upload'),
 ]
+
+if settings.DEBUG:
+        urlpatterns += static(settings.MEDIA_URL,
+                              document_root=settings.MEDIA_ROOT)
