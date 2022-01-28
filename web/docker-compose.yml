@@ -38,6 +38,6 @@ services  :
     depends_on:
       - frontend
     environment :
-      - NGINX_HOST=localhost
+      - NGINX_HOST=20.120.98.83
       - NGINX_FRONTEND_PORT=8080
       - NGINX_BACKEND_PORT=8081
