@@ -171,7 +171,8 @@ class MapMain extends React.Component{
 class MapTitle extends React.Component{
   constructor(props){
     super(props)
-    this.main   = 'Let the Rivers Flow !'
+    this.main   = 'Let the Rivers Flows !'
+    this.main2  = 'A computer vision-based web app to monitor the condition of rivers from satellite images'
     this.state  = {
       curImg  : 0, 
     }
@@ -230,18 +231,15 @@ class MapTitle extends React.Component{
         </div>
         <div className = 'main-title'>
           <div className = 'main-heading'>
-            <h1>Banjeer</h1>
+            <h1>{this.main}</h1>
           </div>
           <div className = 'main-desc'>
-            <p>{this.main}</p>
+            <p>{this.main2}</p>
           </div>
         </div>
         <div className = 'main-control'>
           <button onClick = {this.navLeft}> {'<'} </button>
           <button onClick = {this.navRight}> {'>'} </button>
-        </div>
-        <div className = 'nav-button'>
-          <button onClick = {this.navDown}>This button is to go down</button>
         </div>
       </section>
     )

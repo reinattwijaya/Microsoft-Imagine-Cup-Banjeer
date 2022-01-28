@@ -6,10 +6,10 @@ section{
 
 @keyframes title-animation{
   from{
-    transform : translate(-50%, -50%);
+    transform : translateY(-50%);
   }
   to{
-    transform : translate(-50%, -70%);
+    transform : translateY(-70%);
   }
 }
 
@@ -26,12 +26,14 @@ section.main-title-container>div{
   left            : 0;
   /* filter          : blur(5px); */
   overflow        : hidden;
+  background-color: #D7ECFE
 }
 .main-title-container .main-img img{
   width           : 99.2vw;
   height          : 100vh;
   transition      : transform 0.2s;
   filter          : blur(5px);
+  display         : none !important;
 }
 .main-title-container .main-img img.slid-hid{
   display         : none;
@@ -57,6 +59,9 @@ section.main-title-container>div.main-control{
   justify-content : space-between;
   height          : unset;
 }
+.main-control{
+  display         : none !important;
+}
 .main-control button{
   height          : 80px;
   border          : 0.2em rgba(255, 255, 255, 0.7) solid;
@@ -72,23 +77,25 @@ section.main-title-container>div.main-control{
 .main-title-container .main-title{
   display         : flex;
   flex-flow       : column wrap;
-  align-items     : center;
+  /* align-items     : center; */
   position        : absolute;
-  left            : 50%;
+  left            : 10%;
   top             : 50%;
-  transform       : translate(-50%, -70%);
+  transform       : translateY(-70%);
   animation       : title-animation 1.0s ease-in-out;
   height          : unset;
+  width           : 30em;
+  color           : #2b4162;
 }
 .main-title-container .main-title h1{
   font-size       : 64px;
-  text-transform  : uppercase;
+  text-transform  : none;
   margin-bottom   : 0%;
 }
 
 .main-title-container .main-title p{
-  font-size       : 32px;
-  text-transform  : uppercase;
+  font-size       : 22px;
+  text-transform  : none;
   margin          : 0%;
 }
 
