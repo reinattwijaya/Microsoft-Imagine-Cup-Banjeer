@@ -32,7 +32,7 @@ export default class Map extends React.Component{
       for(let j = 0; j < this.imageSize.width; j+=1024){
         row.push(
           <div className = 'image-hor'>
-              <img src = {require(`./static/downsized_img/${i}_${j}.jpeg`).default} loading='lazy'/>
+              <img src = {require(`./static/downsized_img/${i}_${j}.jpeg`)} loading='lazy'/>
           </div>
         )
       }
