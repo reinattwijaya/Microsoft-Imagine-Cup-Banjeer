@@ -1,0 +1,12 @@
+button.safebutton {
+  background-color: #333;
+  color: white;
+
+  padding: .5rem 1rem;
+
+  transition: .3s;
+}
+
+button.safebutton:disabled {
+  filter: brightness(80%);
+}

@@ -21,7 +21,6 @@ from django.urls import path,include
 from rest_framework import routers                 
 from django.conf import settings
 from django.conf.urls.static import static      
-from image.views import ImageViewSet
 from river.views import RiverView
 
 router = routers.DefaultRouter()                   
@@ -30,7 +29,7 @@ router.register(r'river', RiverView, 'river')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/upload/', ImageViewSet.as_view(), name='upload'),
+    path('api/upload/', include('image.urls')),
 ]
 
 if settings.DEBUG:
