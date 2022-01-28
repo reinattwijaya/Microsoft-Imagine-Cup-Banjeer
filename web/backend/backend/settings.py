@@ -28,12 +28,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ioip5%$)+#dt5^tyaqq#vh+)ycdce3mvw&p-g)$pn-v%2lpiq3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['PRODUCTION'] == 'TRUE' if 'PRODUCTION' in os.environ.keys() else False
+DEBUG = os.environ['PRODUCTION'] != 'TRUE' if 'PRODUCTION' in os.environ.keys() else True
 
-ALLOWED_HOSTS = [
-    os.environ['FRONTEND_URL'] if 'FRONTEND_URL' in os.environ.keys() else 'localhost:3000'
-]
+# ALLOWED_HOSTS = [
+#     os.environ['FRONTEND_URL'] if 'FRONTEND_URL' in os.environ.keys() else 'localhost:3000',
+# ]
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -44,17 +45,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'river.apps.RiverConfig',
+    'corsheaders',
     'rest_framework',
+    'river.apps.RiverConfig',
     'django_filters',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    ''
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
