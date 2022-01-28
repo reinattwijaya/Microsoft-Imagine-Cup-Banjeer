@@ -52,7 +52,8 @@ export default class BanjeerApp extends React.Component{
       }, 
       file_process: false, 
       img_preview : null,
-      img_result  : null
+      img_result  : null, 
+      loading     : false
     }
   }
   componentWillUnmount(){
@@ -76,7 +77,7 @@ export default class BanjeerApp extends React.Component{
         })
         throw new Error("Lol")
       }
-      this.setState({file_process : true})
+      this.setState({file_process : true, img_result : null, loading : true})
       const load  = new FormData()
       load.append('image', this.state.file_form.value, this.state.file_form.value.name)
       let baseUrl   = process.env.REACT_APP_API_ENDPOINT != undefined ? process.env.REACT_APP_API_ENDPOINT : 'http://localhost:8000/api'
@@ -89,7 +90,7 @@ export default class BanjeerApp extends React.Component{
         let url   = URL.createObjectURL(blob)
         console.log(url)
         this.setState({
-          img_result : url
+          img_result : url, loading : false
         })
         res()
       })
@@ -124,9 +125,14 @@ export default class BanjeerApp extends React.Component{
           <div className = 'banjeer-result-title'>
             <p>Annotation Result</p>
           </div>
+          {this.state.loading ? 
+          <div className = 'banjeer-loading'>
+            <p>Doing some Magic...</p>
+          </div>
+          :
           <div key = {this.state.file_process} className = {`banjeer-result-image ${this.state.file_process ? 'show' : 'hide'}`}>
             <img src = {this.state.img_result}/>
-          </div>
+          </div>}
         </div>
       </section>
     )

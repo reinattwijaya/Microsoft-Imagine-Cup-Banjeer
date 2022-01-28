@@ -37,9 +37,9 @@ div.about-us{
   color         : rgb(255, 171, 14);
   font-weight   : 900;
   font-size     : 1.2em;
+  margin-bottom : 1em;
 }
 .aboutus-quote{
   font-style    : italic;
   text-align    : justify;
-  margin-top    : 2em;
 }

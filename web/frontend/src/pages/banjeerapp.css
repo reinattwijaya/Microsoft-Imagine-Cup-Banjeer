@@ -64,3 +64,14 @@ button:hover{
 .banjeer-result-image.hide{
   display         : none;
 }
+.banjeer-loading{
+  font-size       : 2em;
+  display         : flex;
+  flex-flow       : column wrap;
+  align-items     : center;
+  justify-content : center;
+  font-weight     : 900;
+  height          : 50vh;
+  width           : 50vw;
+  border          : 2px rgb(50, 116, 131) solid;
+}

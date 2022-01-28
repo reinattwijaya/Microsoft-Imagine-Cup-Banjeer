@@ -14,37 +14,26 @@ export default class AboutUs extends React.Component{
       major   : ['Computer Science', 'Business and Technology Management'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
       image   : Irfan, 
-      quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
-                Excepteur sint occaecat cupidatat non proident, \sunt in culpa qui officia deserunt mollit anim id est laborum."
+      quote   : ['Ruangguru Business Innovation Challenge (Semifinalist)', 'Rotman-UNIST Trading Competition (First Prize Winner)',
+    'JunctionX Seoul Hackathon AI track (First Prize Winner)']
     }, {
       name    : 'Jonathan Willianto', 
       major   : ['Mechanical Engineering', 'Computer Science'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
       image   : Jowi, 
-      quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
-                Excepteur sint occaecat cupidatat non proident, \sunt in culpa qui officia deserunt mollit anim id est laborum."
+      quote   : ['Gold Medal National Physics Olympiad 2019']
     }, {
       name    : 'Reinatt Hansel Wijaya', 
       major   : ['Computer Science', 'Business and Technology Management'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
       image   : Reinatt, 
-      quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
-                Excepteur sint occaecat cupidatat non proident, \sunt in culpa qui officia deserunt mollit anim id est laborum."
+      quote   : ['Silver Medal National Informatics Olympiad 2018']
     }, {
       name    : 'Muhammad Izaaz Inhar Ramahdani', 
       major   : ['Computer Science', 'Civil Engineering'], 
       univ    : ['KAIST', 'Korea Advanced Institute of Science and Technology'], 
       image   : Izaaz, 
-      quote   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \
-                Excepteur sint occaecat cupidatat non proident, \sunt in culpa qui officia deserunt mollit anim id est laborum."
+      quote   : ['Bronze Medal National Informatics Olympiad 2018']
     }]
   }
   charaSheet(){
@@ -65,8 +54,9 @@ export default class AboutUs extends React.Component{
           <div className = 'aboutus-univ'>
             <p>{val.univ[0]}</p>
           </div>
+          <p>Awards : </p>
           <div className = 'aboutus-quote'>
-            <p>"{val.quote}"</p>
+            {val.quote.map((value, id) => <p key = {id}>{value}</p>)}
           </div>
         </div>
       </div>
